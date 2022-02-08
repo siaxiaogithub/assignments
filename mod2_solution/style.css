@@ -23,7 +23,7 @@ p {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   font-family: Blippo, fantasy;
   color: white;
 }
@@ -33,8 +33,8 @@ p {
   width: 90%;
   border: 3px solid black;
   margin-top: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 
@@ -43,8 +43,8 @@ p {
   width: 90%;
   border: 3px solid black;
   margin-top: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #sushi {
@@ -52,8 +52,8 @@ p {
   width: 90%;
   border: 3px solid black;
   margin-top: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #title {
@@ -68,7 +68,6 @@ p {
   margin-top: 0%;
   border: 1px solid black;
   font-family: fantasy;
-
 }
 
 /********** browser devices only **********/
@@ -155,7 +154,7 @@ p {
   }
   .col-md-12 {
     width: 105.5%;
-    margin-left: -2.5%;
+    margin-left: -2.7%;
   }
 }
 

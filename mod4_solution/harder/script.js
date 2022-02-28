@@ -75,7 +75,7 @@ for (let name of names) {
   }
 
   var newGreetings = names.map(determineGreeting);
-  console.log("Printing mapped new arrays as list: ");
+  console.log("Printing array mapped new arrays as list: ");
   newGreetings.map(x => console.log(x));
 })();
 

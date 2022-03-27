@@ -19,3 +19,7 @@
 ### Module 6
 1. Assignment Repo: https://github.com/siaxiaogithub/assignments/tree/main/mod6_solution 
 2. Deployed URL: https://siaxiaogithub.github.io/assignments/mod6_solution/
+
+### Module 7
+1. Assignment Repo: https://github.com/siaxiaogithub/assignments/tree/main/mod7_solution/assignment2-starter-code
+2. Deployed URL: https://siaxiaogithub.github.io/assignments/mod7_solution/assignment2-starter-code

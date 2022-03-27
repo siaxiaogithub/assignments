@@ -44,8 +44,8 @@ function ShoppingListCheckOffService() {
 
   // List of shopping items
   var toBuyItems = [
-    {name: 'coke', quantity: 10, pricePerItem: 2.00},
-    {name: 'pizza', quantity: 8, pricePerItem: 6.35},
+    {name: 'coconuts', quantity: 3, pricePerItem: 2.00},
+    {name: 'potatos', quantity: 8, pricePerItem: 6.35},
     {name: 'cookies', quantity: 7, pricePerItem: 2.14},
     {name: 'eggs', quantity: 2, pricePerItem: 3.99},
     {name: 'milks', quantity: 3, pricePerItem: 5.79},

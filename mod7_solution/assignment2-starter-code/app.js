@@ -4,7 +4,8 @@
 angular.module('ShoppingListCheckOff', [])
 .controller('ToBuyController', ToBuyController)
 .controller('AlreadyBoughtController', AlreadyBoughtController)
-.service('ShoppingListCheckOffService', ShoppingListCheckOffService);
+.service('ShoppingListCheckOffService', ShoppingListCheckOffService)
+.filter('totalPrice', TotalPriceFilter);
 
 ToBuyController.$inject = ['ShoppingListCheckOffService'];
 function ToBuyController(ShoppingListCheckOffService) {
@@ -24,8 +25,8 @@ function ToBuyController(ShoppingListCheckOffService) {
 }
 
 
-AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
-function AlreadyBoughtController(ShoppingListCheckOffService) {
+AlreadyBoughtController.$inject = ['ShoppingListCheckOffService', 'TotalPriceFilter'];
+function AlreadyBoughtController(ShoppingListCheckOffService, TotalPriceFilter) {
   var boughtList = this;
 
   boughtList.items = ShoppingListCheckOffService.getBoughtItems();
@@ -35,6 +36,12 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
   }
 
   boughtList.emptyMessage = "Nothing bought yet.";
+}
+
+function TotalPriceFilter() {
+  return function(itemPrice, quantity) {
+    return itemPrice * quantity;
+  }
 }
 
 

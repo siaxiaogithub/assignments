@@ -17,21 +17,35 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   .state('home', {
     url: '/',
     templateUrl: 'src/templates/home.template.html'
-  });
-  //
-  // // Categories page
-  // .state('categories', {
-  //   url: '/categories',
-  //   templateUrl: 'src/templates/categories.template.html',
-  //   controller: 'CategoriesController as categories'
-  // });
-  //
-  // // Items.page
-  // .state('items', {
-  //   url: '/items',
-  //   templateUrl: 'src/templates/items.template.html',
-  //   controller: 'ItemsController as items'
-  // });
-}
+  })
+
+  // All Categories
+  .state('categories', {
+    url: '/categories',
+    templateUrl: 'src/templates/categories.template.html',
+    controller: 'CategoriesController as categories',
+    resolve: {
+      items: ['MenuDataService', function (MenuDataService) {
+        return MenuDataService.getAllCategories();
+      }]
+    }
+  })
+
+//Items
+  .state('items', {
+    url: '/items/{item_short_name}',
+    templateUrl: 'src/templates/items.template.html',
+    controller: 'ItemsController as itemList',
+    resolve: {
+      items: ['$stateParams', 'MenuDataService',
+            function ($stateParams, MenuDataService) {
+              return MenuDataService.getItemsForCategory($stateParams.item_short_name)
+                .then(function (items) {
+                  return items;
+                });
+            }]
+          }
+      });
+  }
 
 })();

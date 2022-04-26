@@ -39,7 +39,6 @@ service.findHelper = function(context, menu_items = false) {
     categories = categories.menu_items;
   }
   var foundItems = [];
-  console.log('categories: ', categories);
   for (var i = 0; i < categories.length; i++) {
     foundItems.push(categories[i]);
   }

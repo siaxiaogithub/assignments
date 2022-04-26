@@ -15,7 +15,7 @@ function MenuDataService($http, CategoriesRESTApi, ItemsRESTApi) {
   service.getAllCategories = function() {
   return $http({
     method: "GET",
-    url: CategoriesRESTApi,
+    url: CategoriesRESTApi
   }).then(function(results) {
     items = service.findHelper(results);
     return items;
@@ -29,8 +29,6 @@ service.getItemsForCategory = function(categoryShortName) {
     params: {category: categoryShortName}
   }).then(function(results) {
     items = service.findHelper(results, true);
-    console.log('category short name: ', categoryShortName);
-    console.log('results: ', results);
     return items;
   })
 }

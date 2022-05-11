@@ -31,3 +31,7 @@
 ### Module 9
 1. Assignment Repo: https://github.com/siaxiaogithub/assignments/tree/main/mod9_solution/
 2. Deployed URL: https://siaxiaogithub.github.io/assignments/mod9_solution/
+
+### Module 10
+1. Assignment Repo: https://github.com/siaxiaogithub/assignments/tree/main/mod10_solution/
+2. Deployed URL: https://siaxiaogithub.github.io/assignments/mod10_solution/

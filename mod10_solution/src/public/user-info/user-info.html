@@ -1,0 +1,12 @@
+<div id="info" ng-if="!reg.hasUser()">
+  Not Signed Up Yet. Go to our newsletter to <a ui-sref="public.signup"> sign up! </a>
+</div>
+
+<div id="info" ng-if="reg.hasUser()">
+  Welcome! {{ reg.getCurrentUser().firstname }} <br>
+  Your Fistname: {{ reg.getCurrentUser().firstname }} <br>
+  Your Lastname: {{ reg.getCurrentUser().lastname }} <br>
+  Your Phone Number: {{ reg.getCurrentUser().email }} <br>
+  Your Email Address: {{ reg.getCurrentUser().phone }} <br>
+  Your Favorite Dish: {{ reg.getCurrentUser().favshotname }} <br>
+</div>

@@ -1,0 +1,58 @@
+    <fieldset>
+      <form name='regForm' novalidate>
+
+        <input type="text" name="firstname" placeholder="Enter Your First Name"
+          ng-model="reg.user.firstname"
+          required
+          minlength="1">
+          <span
+            ng-if="(regForm.firstname.$error.minlength || regForm.firstname.$error.required) && regForm.firstname.$touched">
+            First Name must be at least 1 character long
+          </span>
+          <br>
+
+        <input type="text" name="lastname" placeholder="Enter Your Last Name"
+          ng-model="reg.user.lastname"
+          required
+          minlength="1">
+          <span
+            ng-if="(regForm.lastname.$error.minlength || regForm.lastname.$error.required) && regForm.lastname.$touched">
+            Last Name must be at least 1 character long
+          </span>
+          <br>
+
+        <input type="email" name="email" placeholder="Email"
+          ng-model="reg.user.email"
+          required>
+          <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+            Must be a valid email address: handle@domain format
+          </span>
+          <br>
+
+        <input type="text" name="phone" placeholder="Phone ###-###-####"
+          ng-model="reg.user.phone"
+          required
+          pattern="(\d{3})-(\d{3})-(\d{4})">
+          <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+            Phone must be in the format ###-###-####.
+          </span>
+          <br>
+
+        <input type="text" name="favshotname" placeholder="Enter Your Favorite Dish"
+          ng-model="reg.user.favshotname"
+          required
+          minlength="2">
+          <br>
+          <span ng-if="(regForm.favshotname.$error.minlength || regForm.favshotname.$error.required) && regForm.favshotname.$touched">
+            Favorite Dish Must be at least 2 characters long! <br>
+          </span>
+
+        <button
+          ng-disabled="regForm.$invalid"
+          ng-click="reg.submit()">Submit</button>
+      </form>
+    </fieldset>
+
+    <div id="info" ng-if="reg.completed">
+      Thanks for signning up! Your information has been saved!!
+    </div>
